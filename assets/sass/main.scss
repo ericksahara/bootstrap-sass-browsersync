@@ -3,8 +3,10 @@
 // @import "icon/*.png";
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "utilities";
 @import "variables";
+@import "utilities";
 @import "vendor";
-@import "all";
-@import "responsive";
+
+@import "common/common";
+
+@import "responsive/common";

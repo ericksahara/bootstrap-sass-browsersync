@@ -22,8 +22,6 @@ gulp.task('compass', function() {
   .pipe(reload({stream:true}));
 });
 
-
-
 gulp.task('browser-sync', function() {
 
   // if php
@@ -40,8 +38,6 @@ gulp.task('browser-sync', function() {
   //   });
 
 });
-
-
 
 // Reload all Browsers
 gulp.task('bs-reload', function () {
@@ -67,7 +63,7 @@ gulp.task('concat', function() {
 
 // Default task to be run with `gulp`
 gulp.task('watch', ['compass', 'browser-sync'], function () {
-  gulp.watch(["assets/sass/*.scss", "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss"], ['compass']);
+  gulp.watch(["assets/sass/**/*.scss", "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss"], ['compass']);
   gulp.watch("*.php", ['bs-reload']);
   gulp.watch("assets/js/main.js", ['concat', 'uglify']);
 });
