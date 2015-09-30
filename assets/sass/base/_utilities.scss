@@ -1,17 +1,3 @@
-// Mixis, placeholders, functions
-
-@mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
-}
-
-@mixin add-icon($icon){
-    @include icons-sprite($icon);
-    width: icons-sprite-width($icon);
-    height: icons-sprite-height($icon);
-    display: inline-block;
-}
-
 // Utility classes
 .left {
   float: left !important;

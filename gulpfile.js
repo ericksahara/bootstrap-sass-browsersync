@@ -27,7 +27,7 @@ gulp.task('browser-sync', function() {
   // if php
   browserSync({
     watchTask: true,
-    proxy: 'localhost/'
+    proxy: 'localhost/bootstrap-sass-browsersync'
   });
 
   // if static
@@ -63,7 +63,7 @@ gulp.task('concat', function() {
 
 // Default task to be run with `gulp`
 gulp.task('watch', ['compass', 'browser-sync'], function () {
-  gulp.watch(["assets/sass/**/*.scss", "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss"], ['compass']);
+  gulp.watch(["bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss", "assets/sass/**/*.scss"], ['compass']);
   gulp.watch("*.php", ['bs-reload']);
   gulp.watch("assets/js/main.js", ['concat', 'uglify']);
 });
